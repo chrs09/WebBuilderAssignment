@@ -1,0 +1,103 @@
+// Service.scss
+
+.service-container {
+    padding: 4rem 2rem;
+    background-color: #fefefe;
+    text-align: center;
+  
+    .service-content {
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      .service-header {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        color: #7d5a5a;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+  
+      .service-img-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+  
+        .service-card {
+          background: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9);
+          width: 300px;
+          padding: 1.5rem;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: translateY(-5px);
+          }
+  
+          .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+  
+          .service-title {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+          }
+  
+          .service-text {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+    .service-footer {
+        margin-top: 3rem;
+        padding: 2rem 0;
+        // border-top: 1px solid #c0b7b7;
+        text-align: center;
+      
+        p {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+          color: #555;
+        }
+      
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          gap: 10rem;
+      
+          a {
+            font-size: 2rem;
+            color: #7d5a5a;
+            transition: color 0.3s;;
+      
+            &:hover {
+              color: #333;
+              transition: transform 0.3s ease;
+            }
+          }
+          @media (max-width: 768px) {
+            gap: 2rem;
+          }
+      
+          @media (max-width: 425px) {
+            gap: 1.5rem;
+      
+            a {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+  }
+  

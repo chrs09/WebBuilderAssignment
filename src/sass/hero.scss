@@ -1,0 +1,171 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  @media (min-width: 768px) and (max-width:1024px)
+  //  (min-width: 426px) and (max-width:767px) 
+   {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.hero-header {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added to center items vertically */
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Ensure content doesn't stretch too much */
+    margin: 0 auto;
+    flex-grow: 1;
+
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #444;
+      margin-bottom: 4px;
+    }
+
+    .hero-img {
+      height: 9.5rem;
+      object-fit: contain;
+      max-width: 100%;  /* Make sure the image doesn't overflow */
+      @media (min-width: 768px) and (max-width:1024px) {
+        height: 8.5rem;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: 5%;
+      }
+      @media (min-width: 425px) and (max-width:767px) {
+        height: 6rem;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: 5%;
+      }
+      @media (max-width: 375px) {
+        height: 5rem;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: 7%;
+      }
+    }
+
+    .spacer {
+      width: 50px;
+    }
+  }
+
+  .hero-arrow {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: white;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+  }
+}
+
+.btm-hero-content {
+  margin-top: 28%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  @media (min-width: 768px) and (max-width:1024px) {
+    margin-top: auto;
+  } 
+
+  .btm-text1 {
+    font-weight: lighter;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    color: white;
+    padding-bottom: 15px;
+    @media (min-width: 768px) and (max-width:1024px) {
+      font-size: 22px;
+    }
+  }
+
+  .btm-text2 {
+    font-size: 64px;
+    margin-top: 0.5rem;
+    font-weight: lighter;
+    font-family: 'Cinzel', Georgia, serif;
+    color: white;
+    @media (min-width: 768px) and (max-width:1024px) {
+      font-size: 48px;
+    }
+    @media (min-width: 425px) and (max-width:767px) {
+      font-size: 40px;
+    }
+    @media (max-width: 375px) {
+      font-size: 24px;
+    }
+  }
+
+  .btm-btn {
+    margin-top: 2rem;
+    @media (min-width: 768px) and (max-width:1024px) {
+      margin-bottom: 2rem;
+    }
+    .call-now {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border: none;
+      height: 50px;
+      width: 10%;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bolder;
+      font-family: 'Source Sans Pro', arial, sans-serif;
+      @media (min-width: 768px) and (max-width:1024px) {
+        width: 20%;
+      }
+      @media (min-width: 425px) and (max-width:767px) {
+        width: 25%;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; // <-- center content horizontally
+    text-align: center;  // <-- ensure text is centered
+  }
+
+  .btm-hero-content {
+    margin-top: auto; // Reset or center vertically as needed
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; // <-- horizontal centering for inner items
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 13rem;
+
+    .btm-btn .call-now {
+      width: 100%; // Adjust button width to be mobile-friendly
+    }
+  }
+}

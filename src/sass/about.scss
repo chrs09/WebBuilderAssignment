@@ -1,0 +1,54 @@
+.about-container {
+    background-color: rgb(22, 22, 22);
+    height: 75vh;
+    display: flex;               // center horizontally & vertically
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  
+    .about-container-content {
+      text-align: center;
+      color: white;
+  
+      .about-header {
+        .realtor-name {
+          font-size: 36px;
+          font-weight: lighter !important;
+          margin-bottom: 4rem;
+          font-family: 'Cinzel', Georgia, serif;
+        }
+      }
+  
+      .img-content {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+  
+        .profile-pic {
+          border-radius: 100%;
+          object-fit: cover;
+          @media (min-width: 768px) and (max-width:1024px) {
+            width: 80%;
+          }
+          @media (max-width: 425px) {
+            width: 70%;
+          }
+        }
+      }
+  
+      .sub-text {
+        .about-text1 {
+            font-family: 'Source Sans Pro', arial, sans-serif;
+            font-size: 24px;
+            margin-bottom: 0.5rem;
+        }
+  
+        .about-contact {
+          font-size: 1.5rem;
+          font-weight: lighter;
+          font-family: 'Source Sans Pro', arial, sans-serif;
+        }
+      }
+    }
+  }
+  
